@@ -12,6 +12,7 @@
 1. Maquettage du site
 
 - Faire une liste des pages du site
+- Faire le chemin utilisateur
 - Maquette figma : a partir de site cocurrent 
 
 2. Conseption du site & architecture
