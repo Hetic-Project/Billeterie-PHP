@@ -16,8 +16,8 @@
 
 2. Conseption du site & architecture
 
-- un dossier : css, js, html
-- un fichier : index.html
+- un dossier : CSS, JS, Pages, TPL
+- un fichier : index.php
 
 ## DEADLINE
 
