@@ -1,10 +1,40 @@
+# ORGANISATION FRONT
+
+## TEAMS
+
+- Lucas YALMAN
+- Tom CARDONNEL
+- Mohamed YAICH
+- William VANDAL
+
+## TACHES
+
+1. Maquettage du site
+
+- Faire une liste des pages du site
+- Maquette figma : a partir de site cocurrent 
+
+2. Conseption du site & architecture
+
+- un dossier : css, js, html
+- un fichier : index.html
+
+## DEADLINE
+
+- Rendus le 30 avril 23h59
+
+- Jeudi 20 avril 15h : présenter la maquette
+- Mardi 25 avril : présenter le site
+- Jeudi 27 avril : Communication front / back
+
+
 # ORGANISATION BACK
 
 ## TEAMS
 
-- Hugo CIEPLUCHA
-- Faustine CHARRIER
-- Support : Mohamed YAICH
+- Atigou BAH
+- Massinissa BELHARET
+- Support Back : Mohamed YAICH
 
 ## TACHES
 
