@@ -10,7 +10,7 @@ l'utilisateur doit pouvoir se connecter, se déconnecter, afficher un billet, et
 - Visualiser les événements et leurs inscrits 
 ## MCD
 
-<img src="Hetic-Project/Billeterie-PHP/blob/Billeterie-Atigou/server/Mcd-Billet.png" alt="Photo du Mcd">
+<img src="/Hetic-Project/Billeterie-PHP/blob/Billeterie-Atigou/server/Mcd-Billet.png" alt="Photo du Mcd">
 
 ## Routing de l'API
 
