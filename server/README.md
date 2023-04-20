@@ -10,7 +10,7 @@ l'utilisateur doit pouvoir se connecter, se déconnecter, afficher un billet, et
 - Visualiser les événements et leurs inscrits 
 ## MCD
 
-<img src="../client/images/Mcd-billet.png" alt="Photo du Mcd">
+<img src="../MCD-billet.png" alt="Photo du Mcd">
 
 ## Routing de l'API
 
