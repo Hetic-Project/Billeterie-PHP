@@ -5,7 +5,6 @@ require_once './debug.php';
 require_once './database/client.php';
 
 
-
 // Création du controller users
 
 class Users {
