@@ -77,3 +77,34 @@ organisateur :
 # Chemin utilisateur
 
 <img src='./images/CheminUtilisateur.svg' alt='Chemin utilisateur'>
+
+
+# Organisation
+
+- Mobile first : 390 * 844
+- Se mettre au format mobile avant de commencer a coder :
+```
+click-droit => inspecter => vue adaptative
+```
+
+- Pour lancer le serveur php
+
+```shell
+php -S localhost:3000
+```
+
+- Pour visualiser les page en cour de création :
+
+```
+localhost:3000/pages/ma-page.php
+```
+
+- index.php + home.css  > William 
+- createEvent.php + css > William 
+- La page de tous les évènement  > William 
+- La Page d'un évènement > Tom
+- Page de connexion > Lucas
+- Page d'inscription > Lucas
+- Page de téléchargement d'un billet  > Tom
+- Page espace participant > Momo
+- Page de validation d'un billet > Momo 

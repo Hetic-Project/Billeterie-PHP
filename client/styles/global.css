@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    position: relative;
+}
+
+/* VARIABLES */
+
+:root{
+    --primary-color : #4265E2;
+    --fontSize-title-h1 : 20px;
+    --fontSize-title-h2 : 10px;
+    --fontSize-texte : 5px;
+    --padding : 15px;
+    --margin : 15px;
+}
+
+/* HEADER + NAV */
+
+.header{
+    padding: var(--padding);
+    color: #ffffff;
+    background-color:var(--primary-color);
+}
+
+.flex-content-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+}
+
+.header-link{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.burger{
+    width: 30px;
+    fill: #ffffff;
+}
+
+.main-title{
+    font-size: var(--fontSize-title-h1);
+}
+
+.profil{
+    width: 30px;
+}
+
+.search{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-input{
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+}
+
+.nav{
+    display: none;
+}
+
+.appear{
+    display: block;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left:0;
+    background-color: #ffff;
+}
+
+.nav-ul{
+
+}
+.nav-li{
+
+}
+.nav-a{
+
+}
+
+/* MAIN */
+.main{
+    width: 97%;
+    margin: auto;
+}
