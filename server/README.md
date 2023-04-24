@@ -3,10 +3,14 @@
 description de l' API
 
 ## Use case
-
+l'utilisateur doit pouvoir se connecter, se déconnecter, afficher un billet, et valider le billet 
+-> en ce qui concernet l'espace réservé à l'équipe de gestion des événements 
+- ils doivent pouvoir créer, modifier, et annuler un événement
+-ajouter et annuler un visteur à l'événement 
+- Visualiser les événements et leurs inscrits 
 ## MCD
 
-<img src="" alt="">
+<img src="https://github.com/Hetic-Project/Billeterie-PHP/blob/Billeterie-Atigou/server/Mcd-Billet.png" alt="Photo du Mcd">
 
 ## Routing de l'API
 
