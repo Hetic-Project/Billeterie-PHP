@@ -106,5 +106,5 @@ localhost:3000/pages/ma-page.php
 - Page de connexion > Lucas
 - Page d'inscription > Lucas
 - Page de téléchargement d'un billet  > Tom
-- Page espace participant > Momo
-- Page de validation d'un billet > Momo 
+- Page espace participant > Lucas
+- Page de validation d'un billet > Tom 

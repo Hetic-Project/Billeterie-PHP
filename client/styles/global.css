@@ -89,6 +89,6 @@ body{
 
 /* MAIN */
 .main{
-    width: 97%;
-    margin: auto;
+    width: 100%;
+    margin: var(--margin);
 }
