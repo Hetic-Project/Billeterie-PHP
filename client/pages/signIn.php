@@ -8,13 +8,12 @@ require_once '../TPL/header.php';
             <p class="descForm">
                 Veuillez remplir tous les champs :
             </p>
-            <label><input type="radio" name="bouton" value="option1">Monsieur</label>
-            <label><input type="radio" name="bouton" value="option2">Madame</label>
-            <input type="nom" class="iNOM1" placeholder="Nom">
-            <input type="prenom" class="iPRENOM1" placeholder="Prénom">
+            <label><input type="radio" name="bouton" value="option1">Participant</label>
+            <label><input type="radio" name="bouton" value="option2">Organisateur</label>
+            <input type="nom" class="iNOM1" placeholder="Username">
             <input type="email" class="iEMAIL1" placeholder="Adresse e-mail">
             <input type="Mot de passe" class="iMDP1" placeholder="Mot de passe">
-            <p>Votre mot de passe comprend 8 caractères minimum, avec au moins une lettre majuscule, une lettre miniscule et un chiffre (0-9)</p>
+            <p class="mdpDesc">Votre mot de passe comprend 8 caractères minimum, avec au moins une lettre majuscule, une lettre miniscule et un chiffre (0-9)</p>
             <input type="pays" class="iCountry" placeholder="Pays">
             <input type="pays" class="iCodePostal" placeholder="Code Postal">
             <input type="pays" class="iVille" placeholder="Ville">

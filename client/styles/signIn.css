@@ -17,8 +17,7 @@ main {
 .descForm {
     display: flex;
     width: 70%;
-    padding: var(--padding);
-    margin-left: 0%;
+    margin-left: 8%;
     padding: 1%;
 }
 
