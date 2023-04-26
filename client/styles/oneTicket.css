@@ -1,0 +1,36 @@
+.facture {
+    margin: 15px 0 15px 0;
+    font-size: var(--fontSize-title-h2);
+}
+
+.pTicket {
+    margin-top: 15px;
+    font-size: var(--fontSize-texte);
+}
+
+.impression {
+    background: #FFFFFF;
+    width: 50%;
+    margin: var(--margin) 0 var(--margin) 0;
+    padding: 10px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+
+.containerTicket {
+    margin-top: 15px;
+    background-color: grey;
+    padding: 15px;
+}
+
+#spanTicket {
+    margin: 0 20px 0 5px;
+}
+
+#qrCode {
+    padding: 25px;
+    width: fit-content;
+    margin: auto;
+    margin-top: 15px;
+    display: none;
+  }

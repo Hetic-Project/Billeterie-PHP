@@ -11,8 +11,8 @@ body{
 :root{
     --primary-color : #4265E2;
     --fontSize-title-h1 : 20px;
-    --fontSize-title-h2 : 10px;
-    --fontSize-texte : 5px;
+    --fontSize-title-h2 : 17px;
+    --fontSize-texte : 14px;
     --padding : 15px;
     --margin : 15px;
 }
@@ -65,6 +65,7 @@ body{
 
 .nav{
     display: none;
+    z-index: 5;
 }
 
 .appear{
@@ -89,6 +90,5 @@ body{
 
 /* MAIN */
 .main{
-    width: 100%;
     margin: var(--margin);
 }

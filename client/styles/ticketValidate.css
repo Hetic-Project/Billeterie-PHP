@@ -1,0 +1,64 @@
+.red {
+    width: 100%;
+    height: calc(100vh - 120px);
+    padding-top: 15px;
+    background-color: red;
+}
+
+.green {
+    width: 100%;
+    height: 100vh;
+    padding-top: 15px;
+    background-color: greenyellow;
+}
+
+.code_error, .error {
+    font-size: var(--fontSize-title-h1);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video {
+    width: 100%;
+    height: auto;
+    margin-top: var(--margin);
+    border: 5px solid black;
+    border-radius: 20px;
+    z-index: 2;
+}
+
+.span {
+    position: absolute;
+    left: 50%;
+    z-index: 2;
+}
+
+.form {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input {
+    background: #FFFFFF;
+    width: 94%;
+    margin-bottom: var(--margin);
+    padding: 10px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+
+.submit {
+    background: var(--primary-color);
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #000000;
+    color: white;
+    border-radius: 5px;
+}
