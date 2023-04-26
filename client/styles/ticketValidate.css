@@ -28,11 +28,13 @@
     margin-top: var(--margin);
     border: 5px solid black;
     border-radius: 20px;
+    z-index: 2;
 }
 
 .span {
     position: absolute;
     left: 50%;
+    z-index: 2;
 }
 
 .form {
