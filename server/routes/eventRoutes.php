@@ -31,6 +31,9 @@ switch($url){
         if($method == 'GET'){
             // J'utilise la methode getOneEvent() de la class Event
             $controller->getOneEvent($matches[1]);
+        } elseif($method == 'DELETE') {
+            // J'utilise la methode deleteEvent() de la class Event
+            $controller->deleteEvent($matches[1]);
         } else {
             // en cas de méthode uri inconnue j'envoi une erreur
             header('HTTP/1.1 405 Method Not Allowed');
@@ -43,9 +46,6 @@ switch($url){
         if($method == 'GET'){
             // J'utilise la methode getOneCategory() de la class Event
             $controller->getOneCategory($matches[1]);
-        } elseif($method == 'DELETE') {
-            // J'utilise la methode deleteEvent() de la class Event
-            $controller->deleteEvent($matches[1]);
         } else {
             // en cas de méthode uri inconnue j'envoi une erreur
             header('HTTP/1.1 405 Method Not Allowed');

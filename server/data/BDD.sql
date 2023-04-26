@@ -27,6 +27,8 @@ CREATE TABLE ticket (
     code_public VARCHAR(30) NOT NULL,
     code_prive VARCHAR(10) NOT NULL,
     id_event INT NOT NULL,
+    id_user INT NOT NULL,
+    scan INT NOT NULL DEFAULT 0,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP,
     FOREIGN KEY (id_event) REFERENCES event(id)
