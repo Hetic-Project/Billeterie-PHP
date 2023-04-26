@@ -66,7 +66,7 @@ switch($url){
         break;
     default:
         // si aucune route ne correspond j'envoi une erreur
-        header('HTTP/1.1 404 Not Found');
+        http_response_code(404);
         break; 
        
 }

@@ -83,7 +83,7 @@ class Ticket {
     }
     
     function validateTicket($code_public){
-        
+
         $db = new Database();
         $connection = $db->getConnection();
     
@@ -107,13 +107,17 @@ class Ticket {
                 ]);
             }else{
                 header('Content-Type: application/json');
+                http_response_code(400);
                 echo json_encode(array('message' => 'Ticket déja valide'));
+                return;
             }
+
             header('Content-Type: application/json');
             echo json_encode(array('message' => 'Ticket valide'));
 
         } else {
             header('Content-Type: application/json');
+            http_response_code(400);
             echo json_encode(array('message' => 'Ticket invalide'));
         }
     }
