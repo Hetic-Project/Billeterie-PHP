@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin: 0 !important;
+}
+
+.loginTitle {
+    display: flex;
+    justify-items: center;
+    font-size: var(--fontSize-title-h1);
+    padding: var(--padding);
+    margin: var(--margin);
+}
+
+.iEMAIL {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    padding: var(--padding);
+    margin-left: 10%;
+    padding: 2%;
+}
+
+
+.iMDP {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    padding: var(--padding);
+    margin-top: 2%;
+    margin-left: 10%;
+    padding: 2%;
+}
+
+.mdpDesc {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    padding: var(--padding);
+    margin-left: 10%;
+    padding: 1%;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    width: 76%;
+    padding: var(--padding);
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    padding: 2%;
+    background-color:var(--primary-color);
+    border-radius: 5%;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+.mdpO {
+    display: flex;
+    width: 70%;
+    padding: var(--padding);
+    margin-left: 10%;
+    padding: 1%;
+}
