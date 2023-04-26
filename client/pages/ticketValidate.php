@@ -16,10 +16,10 @@ require_once '../TPL/header.php';
                 
 
                     <form action="" method="get" class="form">
-                        <div class="formInput">
-                            <input class="input" type="text" name="spectatorName" id="spectatorName" placeholder="Nom de visiteur" required>
-                            <input class="input" type="number" name="publicCode" id="publicCode" placeholder="Code public du billet" required>
-                        </div>
+                        
+                        <input class="input" type="text" name="spectatorName" id="spectatorName" placeholder="Nom de visiteur" required>
+                        <input class="input" type="number" name="publicCode" id="publicCode" placeholder="Code public du billet" required>
+                        
                         <input class="submit" type="submit" value="Submit" >
                     </form>
                 </div>
