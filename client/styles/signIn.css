@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+}
+
+main {
+    margin: 0 !important;
+}
+
+.signInTitle {
+    display: flex;
+    justify-content: center;
+    font-size: var(--fontSize-title-h1);    
+    padding: var(--padding);
+    margin: var(--margin);
+}
+
+.descForm {
+    display: flex;
+    width: 70%;
+    padding: var(--padding);
+    margin-left: 0%;
+    padding: 1%;
+}
+
+label {
+    padding: var(--padding);
+}
+
+.iNOM1 {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    padding: var(--padding);
+    margin-left: 10%;
+    padding: 2%;
+}
+
+.iPRENOM1 {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    padding: var(--padding);
+    margin-left: 10%;
+    padding: 2%;
+}
+
+.iEMAIL1 {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    padding: var(--padding);
+    margin-left: 10%;
+    padding: 2.1%;
+}
+
+.iMDP1 {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    padding: var(--padding);
+    margin-left: 10%;
+    padding: 2%;
+}
+
+.iCountry {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    padding: var(--padding);
+    margin-left: 10%;
+    padding: 2%;
+}
+
+.iVille {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    padding: var(--padding);
+    margin-left: 10%;
+    padding: 2%;
+}
+
+.iCodePostal {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    padding: var(--padding);
+    margin-left: 10%;
+    padding: 2%;
+}
+
+.iTel {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    padding: var(--padding);
+    margin-left: 10%;
+    padding: 2%;
+}
+
+input {
+    margin: var(--margin);
+}
