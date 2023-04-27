@@ -6,8 +6,8 @@ require_once '../TPL/header.php';
                 DÉJA CLIENT? IDENTIFIEZ-VOUS
             </h1>
             <form action="..../Logger-PHP/login" method="POST">
-                <input name="mail" class="iEMAIL" placeholder="Adresse e-mail">
-                <input name="password" class="iMDP" placeholder="Mot de passe">
+                <input name="mail" class="inputText" placeholder="Adresse e-mail">
+                <input name="password" class="inputText" placeholder="Mot de passe">
                 <p class="mdpDesc">Votre mot de passe comprend 8 caractères minimum, avec au moins une lettre majuscule, une lettre miniscule et un chiffre (0-9)</p>
                 <a href="#" class="mdpO">Mot de passe oublié?</a>
                 <input type="submit" class="button" value="Me Connecter">
