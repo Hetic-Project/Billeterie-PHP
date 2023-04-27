@@ -8,7 +8,7 @@ require_once '../TPL/header.php';
             <p class="descForm">
                 Veuillez remplir tous les champs :
             </p>
-        <form action="/server/Logger-PHP/register" method="POST">
+        <form action="..../Logger-PHP/register" method="POST">
             <label><input name="role" type="radio" name="bouton" value="option1" checked>Participant</label>
             <label><input name="role" type="radio" name="bouton" value="option2">Organisateur</label>
             <input name="username" type="nom" class="iNOM1" placeholder="Username">
