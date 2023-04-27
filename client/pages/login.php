@@ -16,9 +16,7 @@ require_once '../TPL/header.php';
             </form>
 
             <a href="./signIn.php">
-            <button>
-                Pas de compte ? Inscrivez-vous!
-            </button>
+            <input type="button" class="button" value="Pas de compte ? Inscrivez-vous!">
             </a>
         </main>
         <script src="../JS/index.js"></script>

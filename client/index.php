@@ -1,5 +1,5 @@
 <?php
-require_once './TPL/header.php';
+require_once './TPL/header_index.php';
 ?>
         <main class="main">
             
