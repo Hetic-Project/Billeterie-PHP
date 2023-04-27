@@ -2,9 +2,7 @@
 require_once '../TPL/header.php';
 ?>
         <main class="main">
-            <h1 class="signInTitle">
-                CRÉEZ VOTRE COMPTE
-            </h1>
+            <h1 class="signInTitle">CRÉEZ VOTRE COMPTE</h1>
             <p class="descForm">
                 Veuillez remplir tous les champs :
             </p>
