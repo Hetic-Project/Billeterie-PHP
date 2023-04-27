@@ -1,0 +1,97 @@
+.breadcrumb {
+    padding: 0 .5rem;
+    margin-top: 15px;
+}
+
+.breadcrumb ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: var(--fontSize-texte);
+}
+
+.breadcrumb li:not(:last-child)::after {
+    display: inline-block;
+    margin: 0 .25rem;
+    content: " / ";
+    font-size: var(--fontSize-texte);
+}
+
+.containerEvent {
+    width: 100vw;
+    background-color: #D5D5D5;
+    margin-top: var(--margin);
+    left: calc(-1 * var(--margin));
+}
+
+.informationEvent {
+    display: flex;
+    flex-direction: row;
+}
+
+.imgEvent {
+    width: 30%;
+    height: 20vh;
+    background-color: red;
+    margin: 15px;
+    border-radius: 10px;
+}
+
+.containerEvent {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0 15px 0;
+    position: relative;
+}
+
+.informationText {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 30px 15px 30px 15px;
+}
+
+.border {
+    margin-left: 15px;
+}
+
+.border:h2 {
+    font-size: var(--fontSize-title-h2);
+}
+
+.border:p {
+    font-size: var(--fontSize-texte);
+}
+
+.containerReasuranceEvent {
+    margin: var(--margin);
+    display: flex;
+    justify-content: space-between;
+}
+.reasuranceEvent {
+    background-color: #D5D5D5;
+    padding: 10px 16% 10px 16%;
+    border-radius: 5px;
+}
+
+.buttonAcheter {
+    width: 91%;
+    margin: auto;
+    cursor: pointer;
+}
+
+.containerButtonOrga {
+    display: none;
+    margin-top: 30px;
+}
+
+.buttonOrga {
+    width: 91%;
+    margin: var(--margin);
+    background-color: #ffffff;
+    border: 2px solid var(--primary-color);
+    color: black;
+    display: block;
+}
