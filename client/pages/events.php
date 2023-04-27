@@ -19,12 +19,12 @@
         <main class="main">
 
             <h2 class="events-title">Evènements</h2>
-            
+
             <div class="all-events">
 
             <?php foreach($data as $event): ?>
 
-              <a class="events-images-links" href="./oneEvent.php?<?=$event["id"]?>"><img src="<?=$event["image"]?>" alt="<?=$event["nom"]?>" class="events-image"></a>
+              <a class="events-images-links" href="./oneEvent.php?<?=$event["id"]?>"><img src="<?=$event["picture"]?>" alt="<?=$event["name"]?>" class="events-image"></a>
 
             <?php endforeach; ?>
 
