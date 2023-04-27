@@ -75,18 +75,31 @@ body{
     position: absolute;
     top: 0;
     left:0;
-    background-color: #ffff;
+    background-color: var(--primary-color);
+
 }
 
 .nav-ul{
+    margin: 30px 0px 0px 30px;
+    list-style-type: none;
 
 }
-.nav-li{
+.nav-li:not(:last-child)::after{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px 20px 0px;
+    content: "____________________";
+
 
 }
+
 .nav-a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: var(--fontSize-title-h1);
 
 }
+
 
 /* MAIN */
 .main{

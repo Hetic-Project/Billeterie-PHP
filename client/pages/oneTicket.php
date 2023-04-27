@@ -37,7 +37,7 @@ require_once '../TPL/header.php';
 
             var qrCode = document.getElementById("qrCode");
             qrCode.style.display = "flex";
-            new QRCode(qrCode, <?php $qrCodeTicket ?>   )
+            new QRCode(qrCode, <?php $qrCodeTicket ?>)
         </script>
     </body>
 </html>
