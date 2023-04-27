@@ -2,7 +2,7 @@
 BEGIN;
 
 
-DROP TABLE IF EXISTS  `event`, `ticket`, `category`;
+DROP TABLE IF EXISTS  `event`, `ticket`;
 
 CREATE TABLE event (
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -35,11 +35,5 @@ CREATE TABLE ticket (
     
 );
 
-CREATE TABLE category (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(30) NOT NULL,
-    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP  
-);
 
 COMMIT;

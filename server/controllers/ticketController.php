@@ -15,16 +15,16 @@ class Ticket {
         $connection = $db->getConnection();
         
         // Génère une chaîne hexadécimale de 16 caractères
-        $code_prive = bin2hex(random_bytes(8)); 
+        $private_code = bin2hex(random_bytes(8)); 
         // Génère une chaîne alphanumérique de 10 caractères
-        $code_public = bin2hex(random_bytes(5)); 
+        $public_code = bin2hex(random_bytes(5)); 
         
         // Insérer les données dans la table ticket
-        $stmt = $connection->prepare("INSERT INTO ticket (code_public, code_prive, id_event, id_user) VALUES (:code_public, :code_prive, :id_event, :id_user)");
-        $stmt->bind_param("ssii", $code_public, $code_prive, $id_event, $id_user);
+        $stmt = $connection->prepare("INSERT INTO ticket (public_code, private_code, id_event, id_user) VALUES (:public_code, :private_code, :id_event, :id_user)");
+        $stmt->bind_param("ssii", $public_code, $private_code, $id_event, $id_user);
         $stmt->execute([
-            ":code_public" => $code_public, 
-            ":code_prive" => $code_prive, 
+            ":public_code" => $public_code, 
+            ":private_code" => $private_code, 
             ":id_event" => $id_event, 
             ":id_user" => $id_user
         ]);
@@ -86,16 +86,16 @@ class Ticket {
         echo json_encode(array('message' => 'Ticket supprimé avec succès.'));
     }
     
-    function validateTicket($code_public){
+    function validateTicket($public_code){
 
         $db = new Database();
         $connection = $db->getConnection();
     
         // Vérifie si le code public existe dans la table ticket
-        $request = $connection->prepare("SELECT * FROM ticket WHERE code_public = :code_public");
+        $request = $connection->prepare("SELECT * FROM ticket WHERE public_code = :public_code");
         
         $request->execute([
-            ":code_public" => $code_public,
+            ":public_code" => $public_code,
         ]);
         $result = $request->fetch(PDO::FETCH_ASSOC);
 
@@ -105,9 +105,9 @@ class Ticket {
             // Vérifier si la valeur du champ scan est égale à 0
             if ($result['scan'] == 0) {
                 // Mettre à jour la valeur du champ scan à 1
-                $updateRequest = $connection->prepare("UPDATE ticket SET scan = 1 WHERE code_public = :code_public");
+                $updateRequest = $connection->prepare("UPDATE ticket SET scan = 1 WHERE public_code = :public_code");
                 $updateRequest->execute([
-                    ":code_public" => $code_public
+                    ":public_code" => $public_code
                 ]);
             }else{
                 header('Content-Type: application/json');

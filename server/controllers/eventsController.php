@@ -46,7 +46,7 @@ class Event {
         $db = new Database();
         $connection = $db->getConnection();
     
-        $request = $connection->prepare("SELECT * FROM event WHERE genre_sport = :category");
+        $request = $connection->prepare("SELECT * FROM event WHERE sport = :category");
         $request->execute([
             ':category' => $category
         ]);
@@ -62,20 +62,20 @@ class Event {
     function createEvent(){
 
         
-        $nom = $_POST['nom'];
-        $image = $_POST['image'];
+        $name = $_POST['name'];
+        $picture = $_POST['picture'];
         $date = $_POST['date'];
-        $heure = $_POST['heure'];
-        $adresse = $_POST['adresse'];
-        $ville = $_POST['ville'];
-        $code_postal = $_POST['code_postal'];
+        $hour = $_POST['hour'];
+        $adress = $_POST['adress'];
+        $city = $_POST['city'];
+        $zip_code = $_POST['zip_code'];
         $description = $_POST['description'];
-        $genre_sport = $_POST['genre_sport'];
-        $organisateur_id = $_POST['organisateur_id'];
-        $nombre_places = $_POST['nombre_places'];
+        $sport = $_POST['sport'];
+        $organizer_id = $_POST['organizer_id'];
+        $number_seats = $_POST['number_seats'];
     
         
-        if (!$nom || !$date || !$heure || !$adresse || !$ville || !$code_postal || !$description || !$genre_sport || !$organisateur_id || !$nombre_places || !$image) {
+        if (!$name || !$date || !$hour || !$adress || !$city || !$zip_code || !$description || !$sport || !$organizer_id || !$number_seats || !$picture) {
             header('HTTP/1.1 400 Bad Request');
             echo json_encode(array('message' => 'Tous les champs sont requis.'));
             return;
@@ -88,25 +88,25 @@ class Event {
         
         $request = $connection->prepare("
             INSERT INTO event
-                (nom, image, date, heure, adresse, ville, code_postal, description, genre_sport, organisateur_id, nombre_places)
+                (name, picture, date, hour, adress, city, zip_code, description, sport, organizer_id, number_seats)
             VALUES
-                (:nom, :image, :date, :heure, :adresse, :ville, :code_postal, :description, :genre_sport, :organisateur_id, :nombre_places)
+                (:name, :picture, :date, :hour, :adress, :city, :zip_code, :description, :sport, :organizer_id, :number_seats)
         ");
     
         
         $request->execute(
             [
-                ':nom' => $nom,
-                ':image' => $image,
+                ':name' => $name,
+                ':picture' => $picture,
                 ':date' => $date,
-                ':heure' => $heure,
-                ':adresse' => $adresse,
-                ':ville' => $ville,
-                ':code_postal' => $code_postal,
+                ':hour' => $hour,
+                ':adress' => $adress,
+                ':city' => $city,
+                ':zip_code' => $zip_code,
                 ':description' => $description,
-                ':genre_sport' => $genre_sport,
-                ':organisateur_id' => $organisateur_id,
-                ':nombre_places' => $nombre_places
+                ':sport' => $sport,
+                ':organizer_id' => $organizer_id,
+                ':number_seats' => $number_seats
 
             ]
         );
@@ -122,19 +122,19 @@ class Event {
 
     function updateEvent($id){
 
-        $nom = $_POST['nom'];
-        $image = $_POST['image'];
+        $name = $_POST['name'];
+        $picture = $_POST['picture'];
         $date = $_POST['date'];
-        $heure = $_POST['heure'];
-        $adresse = $_POST['adresse'];
-        $ville = $_POST['ville'];
-        $code_postal = $_POST['code_postal'];
+        $hour = $_POST['hour'];
+        $adress = $_POST['adress'];
+        $city = $_POST['city'];
+        $zip_code = $_POST['zip_code'];
         $description = $_POST['description'];
-        $genre_sport = $_POST['genre_sport'];
-        $organisateur_id = $_POST['organisateur_id'];
-        $nombre_places = $_POST['nombre_places'];
+        $sport = $_POST['sport'];
+        $organizer_id = $_POST['organizer_id'];
+        $number_seats = $_POST['number_seats'];
     
-        if (!$nom || !$date || !$heure || !$adresse || !$ville || !$code_postal || !$description || !$genre_sport || !$organisateur_id || !$nombre_places || !$image) {
+        if (!$name || !$date || !$hour || !$adress || !$city || !$zip_code || !$description || !$sport || !$organizer_id || !$number_seats || !$picture) {
             header('HTTP/1.1 400 Bad Request');
             echo json_encode(array('message' => 'Tous les champs sont requis.'));
             return;
@@ -145,33 +145,33 @@ class Event {
     
         $request = $connection->prepare("
             UPDATE event
-            SET nom = :nom,
-                image = :image,
+            SET name = :name,
+                picture = :picture,
                 date = :date,
-                heure = :heure,
-                adresse = :adresse,
-                ville = :ville,
-                code_postal = :code_postal,
+                hour = :hour,
+                adress = :adress,
+                city = :city,
+                zip_code = :zip_code,
                 description = :description,
-                genre_sport = :genre_sport,
-                organisateur_id = :organisateur_id,
-                nombre_places = :nombre_places
+                sport = :sport,
+                organizer_id = :organizer_id,
+                number_seats = :number_seats
             WHERE id = :id
         ");
     
         $request->execute(
             [
-                ':nom' => $nom,
-                ':image' => $image,
+                ':name' => $name,
+                ':picture' => $picture,
                 ':date' => $date,
-                ':heure' => $heure,
-                ':adresse' => $adresse,
-                ':ville' => $ville,
-                ':code_postal' => $code_postal,
+                ':hour' => $hour,
+                ':adress' => $adress,
+                ':city' => $city,
+                ':zip_code' => $zip_code,
                 ':description' => $description,
-                ':genre_sport' => $genre_sport,
-                ':organisateur_id' => $organisateur_id,
-                ':nombre_places' => $nombre_places,
+                ':sport' => $sport,
+                ':organizer_id' => $organizer_id,
+                ':number_seats' => $number_seats,
                 ':id' => $id
             ]
         );

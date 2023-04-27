@@ -1,11 +1,5 @@
-
 BEGIN;
 
-INSERT INTO `event` (
-    `name`,
-)
-VALUES ('Rugby'), 
-('Football');
 
 INSERT INTO `event` (
     `name`,
@@ -95,9 +89,8 @@ VALUES (
     '78240',
     'Rencontre de football a Chambourcy',
     'Football',
-    3,
+    3, 
     300
 );
-
 
 COMMIT;
