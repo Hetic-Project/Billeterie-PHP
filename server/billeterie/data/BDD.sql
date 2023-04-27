@@ -2,21 +2,21 @@
 BEGIN;
 
 
-DROP TABLE IF EXISTS  `event`, `ticket`;
+DROP TABLE IF EXISTS  `event`, `ticket`, `category`;
 
 CREATE TABLE event (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    nom VARCHAR(255) NOT NULL,
-    image VARCHAR(255) NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    picture VARCHAR(255) NOT NULL,
     date DATE NOT NULL,
-    heure TIME NOT NULL,
-    adresse VARCHAR(255) NOT NULL,
-    ville VARCHAR(255) NOT NULL,
-    code_postal VARCHAR(10) NOT NULL,
+    hour TIME NOT NULL,
+    adress VARCHAR(255) NOT NULL,
+    city VARCHAR(255) NOT NULL,
+    zip_code VARCHAR(10) NOT NULL,
     description TEXT,
-    genre_sport VARCHAR(255) NOT NULL,
-    organisateur_id INT NOT NULL,
-    nombre_places INT NOT NULL,
+    sport VARCHAR(255) NOT NULL,
+    organizer_id INT NOT NULL,
+    number_seats INT NOT NULL,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP
 );
@@ -24,8 +24,8 @@ CREATE TABLE event (
 
 CREATE TABLE ticket (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    code_public VARCHAR(30) NOT NULL,
-    code_prive VARCHAR(10) NOT NULL,
+    public_code VARCHAR(30) NOT NULL,
+    private_code VARCHAR(10) NOT NULL,
     id_event INT NOT NULL,
     id_user INT NOT NULL,
     scan INT NOT NULL DEFAULT 0,
@@ -33,6 +33,13 @@ CREATE TABLE ticket (
     updated_at TIMESTAMP,
     FOREIGN KEY (id_event) REFERENCES event(id)
     
+);
+
+CREATE TABLE category (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(30) NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP  
 );
 
 COMMIT;

@@ -2,17 +2,23 @@
 BEGIN;
 
 INSERT INTO `event` (
-    `nom`,
-    `image`,
+    `name`,
+)
+VALUES ('Rugby'), 
+('Football');
+
+INSERT INTO `event` (
+    `name`,
+    `picture`,
     `date`,
-    `heure`,
-    `adresse`,
-    `ville`,
-    `code_postal`,
+    `hour`,
+    `adress`,
+    `city`,
+    `zip_code`,
     `description`,
-    `genre_sport`,
-    `organisateur_id`,
-    `nombre_places`
+    `sport`,
+    `organizer_id`,
+    `number_seats`
 )
 VALUES (
     'Rugby Night',
