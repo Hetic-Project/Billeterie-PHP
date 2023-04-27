@@ -1,0 +1,5 @@
+.sport-title{
+    font-size: var(--fontSize-title-h2);
+    margin-top: var(--margin);
+    margin-bottom: var(--margin);
+}
