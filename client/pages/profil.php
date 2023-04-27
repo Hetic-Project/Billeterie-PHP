@@ -31,10 +31,11 @@ require_once '../TPL/header.php';
                     Date :
                  </p>
                 </div>
-                
-                <button>
-                    Voir mon Billet
-                </button>
+                <input type="button" class="button" value="Voir mon billet">
+
+                <form action="..../Logger-PHP/logout" method="GET">
+                    <input type="button" class="button" value="Me déconnecter">
+                </form>
             </div>
         </main>
         <script src="../JS/index.js"></script>

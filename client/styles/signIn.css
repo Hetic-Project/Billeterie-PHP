@@ -24,6 +24,8 @@ label {
     padding: var(--padding);
     margin-left: 10%;
     padding: 2%;
+    border: 2px solid black;
+    border-radius: 4px;
 }
 
 .iPRENOM1 {
@@ -33,6 +35,8 @@ label {
     padding: var(--padding);
     margin-left: 10%;
     padding: 2%;
+    border: 2px solid black;
+    border-radius: 4px;
 }
 
 .iEMAIL1 {
@@ -42,6 +46,8 @@ label {
     padding: var(--padding);
     margin-left: 10%;
     padding: 2.1%;
+    border: 2px solid black;
+    border-radius: 4px;
 }
 
 .iMDP1 {
@@ -51,6 +57,8 @@ label {
     padding: var(--padding);
     margin-left: 10%;
     padding: 2%;
+    border: 2px solid black;
+    border-radius: 4px;
 }
 
 .iCountry {
@@ -60,6 +68,8 @@ label {
     padding: var(--padding);
     margin-left: 10%;
     padding: 2%;
+    border: 2px solid black;
+    border-radius: 4px;
 }
 
 .iVille {
@@ -69,6 +79,8 @@ label {
     padding: var(--padding);
     margin-left: 10%;
     padding: 2%;
+    border: 2px solid black;
+    border-radius: 4px;
 }
 
 .iCodePostal {
@@ -78,6 +90,8 @@ label {
     padding: var(--padding);
     margin-left: 10%;
     padding: 2%;
+    border: 2px solid black;
+    border-radius: 4px;
 }
 
 .iTel {
@@ -87,6 +101,8 @@ label {
     padding: var(--padding);
     margin-left: 10%;
     padding: 2%;
+    border: 2px solid black;
+    border-radius: 4px;
 }
 
 input {
