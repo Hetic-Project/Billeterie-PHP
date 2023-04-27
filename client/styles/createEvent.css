@@ -1,0 +1,30 @@
+.inputstyle2{
+    display: flex;
+    gap: 15px;
+}
+
+.iDESC{
+    width: 95%;
+    height: 10vh;
+    padding: 2%;
+    border: 2px solid black;
+    border-radius: 4px;
+    margin: 15px 0px 15px 0px;
+}
+
+
+.iPLACEHOLDER{
+    display: flex;
+    width: 95%;
+    padding: 2%;
+    border: 2px solid black;
+    border-radius: 4px;
+    margin: 15px 0px 15px 0px;
+}
+
+
+
+.margin{
+    margin-top: var(--margin);
+}
+
