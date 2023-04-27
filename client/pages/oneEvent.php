@@ -1,8 +1,18 @@
 <?php
 require_once '../TPL/header.php';
+// Utilisation de la superglobale $_GET
+if (isset($_GET['id'])) {
+    $valeur = $_GET['id'];
+    $onePageEventUrl = "http://localhost:4000/events/" .$valeur;
+
+    // Effectuer la requête GET
+    $jsonOneEvent = file_get_contents($onePageEventUrl);
+    $dataOneEvent = json_decode($jsonOneEvent, true);
+}
 ?>
         <main class="main">
 
+            
             <nav aria-label="Breadcrumb" class="breadcrumb">
                 <ul>
                     <li><a href="../index.php">Accueil</a></li>
@@ -12,6 +22,8 @@ require_once '../TPL/header.php';
                 </ul>
             </nav>
 
+            <h1><?= $dataOneEvent["name"] ?></h1>
+            
             <div class="containerEvent">
                 <h2 class="border"><?php $titleEvent ?></h2>
 

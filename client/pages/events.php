@@ -24,7 +24,7 @@
 
             <?php foreach($data as $event): ?>
 
-              <a class="events-images-links" href="./oneEvent.php?<?=$event["id"]?>"><img src="<?=$event["picture"]?>" alt="<?=$event["name"]?>" class="events-image"></a>
+              <a class="events-images-links" href="./oneEvent.php?id=<?=$event["id"]?>"><img src="<?=$event["picture"]?>" alt="<?=$event["name"]?>" class="events-image"></a>
 
             <?php endforeach; ?>
 
