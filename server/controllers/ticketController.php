@@ -33,13 +33,17 @@ class Ticket {
         echo json_encode(array('message' => 'Ticket généré avec succès'));
     }
 
-    function getAllTickets(){
+    function getAllTickets($id_user){
 
         $db = new Database();
         $connection = $db->getConnection();
     
-        $request = $connection->prepare("SELECT * FROM ticket");
-        $request->execute();
+        $request = $connection->prepare("SELECT * FROM ticket WHERE id_user = :id_user");
+
+        $request->execute([
+            ":id_user" => $id_user
+        ]);
+
         $tickets = $request->fetchAll(PDO::FETCH_ASSOC);
 
         $connection = null;
@@ -53,7 +57,7 @@ class Ticket {
         $db = new Database();
         $connection = $db->getConnection();
     
-        $request = $connection->prepare("SELECT * FROM ticket WHERE id = :id");
+        $request = $connection->prepare("SELECT * FROM ticket JOIN event ON ticket.id_event = event.id  WHERE ticket.id = :id");
         $request->execute([
             ':id' => $id
         ]);
@@ -121,6 +125,5 @@ class Ticket {
             echo json_encode(array('message' => 'Ticket invalide'));
         }
     }
-    
-    
+        
 }

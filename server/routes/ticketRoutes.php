@@ -26,20 +26,23 @@ switch($url){
 
         break;
         
-    case '/tickets':
-        
+    case preg_match('@^/tickets/(\d+)$@', $url, $matches) ? $url : '':
+    
         $controller = new Ticket();
+
         if($method == 'GET'){
+            
+            $controller->getAllTickets($matches[1]);
 
-            $controller->getAllTickets();
-
-        }else{
+        } else {
             
             header('HTTP/1.1 405 Method Not Allowed');
             header('Allow: GET');
         };
+
         break;
-    case preg_match('@^/tickets/(\d+)$@', $url, $matches) ? $url : '':
+
+    case preg_match('@^/oneTicket/(\d+)$@', $url, $matches) ? $url : '':
         
         $controller = new Ticket();
 
@@ -54,7 +57,7 @@ switch($url){
         } else {
           
             header('HTTP/1.1 405 Method Not Allowed');
-            header('Allow: GET');
+            header('Allow: GET, DELETE');
         };
         break;
     
