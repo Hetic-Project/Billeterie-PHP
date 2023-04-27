@@ -5,13 +5,15 @@ require_once '../TPL/header.php';
             <h1 class="loginTitle">
                 DÉJA CLIENT? IDENTIFIEZ-VOUS
             </h1>
-            <input type="email" class="iEMAIL" placeholder="Adresse e-mail">
-            <input type="Mot de passe" class="iMDP" placeholder="Mot de passe">
-            <p class="mdpDesc">Votre mot de passe comprend 8 caractères minimum, avec au moins une lettre majuscule, une lettre miniscule et un chiffre (0-9)</p>
-            <a href="#" class="mdpO">Mot de passe oublié?</a>
-            <button>
-                Me Connecter
-            </button>
+            <form action="" method="POST">
+                <input type="email" class="iEMAIL" placeholder="Adresse e-mail">
+                <input type="Mot de passe" class="iMDP" placeholder="Mot de passe">
+                <p class="mdpDesc">Votre mot de passe comprend 8 caractères minimum, avec au moins une lettre majuscule, une lettre miniscule et un chiffre (0-9)</p>
+                <a href="#" class="mdpO">Mot de passe oublié?</a>
+                <button>
+                    Me Connecter
+                </button>
+            </form>
 
             <a href="./signIn.php">
             <button>
