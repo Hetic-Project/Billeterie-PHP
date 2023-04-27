@@ -1,0 +1,58 @@
+.profileTitle {
+    display: flex;
+    justify-content: center;
+    padding: var(--padding);
+    margin: var(--margin);
+}
+
+.subTitleProfile {
+    display: flex;
+    padding: var(--padding);
+    margin: var(--margin);
+}
+
+.bgColor {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 0.9rem;
+    height: 120px;
+    background-color: rgb(170, 170, 170);
+}
+
+#conteneur1 {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+#description {
+    display:inline-block;
+    padding: var(--padding);
+}
+
+.billet {
+    display: flex;
+    padding: var(--padding);
+    margin: var(--margin); 
+}
+
+.bgColor1 {
+    display: flex;
+    width: 100%;
+    gap: 10%;
+    font-size: 0.9rem;
+    height: 60px;
+    background-color: rgb(170, 170, 170);
+}
+
+
+.eventName {
+    display: flex;
+    margin: var(--margin); 
+}
+
+.eventDate {
+    display: flex;
+    margin: var(--margin); 
+}

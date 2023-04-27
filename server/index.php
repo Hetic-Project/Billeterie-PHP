@@ -7,4 +7,5 @@ ini_set('display_errors', 1);
 // header("Access-Control-Allow-Headers: Content-Type, Authorization");
 
 // Touts les fichiers routes de l'application
-require_once './routes/usersRoutes.php';
+require_once './routes/eventRoutes.php';
+require_once './routes/ticketRoutes.php';
