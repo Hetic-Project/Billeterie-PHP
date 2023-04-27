@@ -34,8 +34,8 @@
         
         <nav class="nav">
             <ul class="nav-ul">
-                <li class="nav-li"><a href="./index.php" class="nav-a">Acceuil</a></li>
-                <li class="nav-li"><a href="./pages/events.php" class="nav-a">Evenements</a></li>
+                <li class="nav-li"><a href="./index.php" class="nav-a">Accueil</a></li>
+                <li class="nav-li"><a href="./pages/events.php" class="nav-a">Évènements</a></li>
                 <li class="nav-li"><a href="./pages/signIn.php" class="nav-a">Inscription</a></li>
                 <li class="nav-li"><a href="./pages/login.php" class="nav-a">Connexion</a></li>
                 <li class="nav-li"><a href="./pages/createEvent.php" class="nav-a">Créer un évènement</a></li>

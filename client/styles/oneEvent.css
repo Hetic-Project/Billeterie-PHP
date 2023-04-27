@@ -68,6 +68,8 @@
 .containerReasuranceEvent {
     margin: var(--margin);
     display: flex;
+    flex-wrap: wrap;
+    row-gap: 15px;
     justify-content: space-between;
 }
 .reasuranceEvent {
@@ -77,9 +79,14 @@
 }
 
 .buttonAcheter {
-    width: 91%;
-    margin: auto;
+    width: 100%;
     cursor: pointer;
+    padding: 10px;
+    border: 0px;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: #ffffff;
+
 }
 
 .containerButtonOrga {

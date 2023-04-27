@@ -31,9 +31,10 @@ require_once '../TPL/header.php';
             <div class="containerReasuranceEvent">
                 <p class="reasuranceEvent">eTicket</p>
                 <p class="reasuranceEvent">Revente</p>
+                <button class="buttonAcheter">Acheter</button>  
             </div>
 
-            <button class="buttonAcheter">Acheter</button>
+            
 
             <div class="containerButtonOrga">
                 <button class="buttonOrga">Modifier l'evenement</button>
