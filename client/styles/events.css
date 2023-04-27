@@ -1,0 +1,25 @@
+.events-title{
+ font-size: var(--fontSize-title-h2);
+}
+
+.all-events{
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: var(--margin);
+}
+
+.events-images-links{
+    display: inline-flex;
+    width: 30%;
+    height: 150px;
+
+}
+
+.events-image{
+    width: 100%;
+}

@@ -17,6 +17,7 @@ switch($url){
         if($method == 'GET'){
             
             $controller->generateTicket($matches[1], $matches[2]);
+            $matched = true;
 
         } else {
           
@@ -33,6 +34,7 @@ switch($url){
         if($method == 'GET'){
             
             $controller->getAllTickets($matches[1]);
+            $matched = true;
 
         } else {
             
@@ -49,6 +51,7 @@ switch($url){
         if($method == 'GET'){
             
             $controller->getOneTicket($matches[1]);
+            $matched = true;
 
         } elseif($method == 'DELETE') {
             
@@ -67,6 +70,7 @@ switch($url){
         if($method == 'GET'){
     
             $controller->validateTicket($matches[1]);
+            $matched = true;
     
         }else{
     
@@ -77,7 +81,10 @@ switch($url){
           
     default:
         // si aucune route ne correspond j'envoi une erreur
-        header('HTTP/1.1 404 Not Found');
+        if($matched == false){
+
+            http_response_code(404);
+        }
         break; 
        
 }
