@@ -17,7 +17,7 @@
 
             <?php foreach($dataRugby as $eventRugby): ?>
 
-                <a class="events-images-links" href="./pages/oneEvent.php?<?=$eventRugby["id"]?>"><img src="<?=$eventRugby["picture"]?>" alt="<?=$eventRugby["name"]?>" class="events-image"></a>
+                <a class="events-images-links" href="./pages/oneEvent.php?id=<?=$eventRugby["id"]?>"><img src="<?=$eventRugby["picture"]?>" alt="<?=$eventRugby["name"]?>" class="events-image"></a>
 
             <?php endforeach; ?>
 
@@ -29,7 +29,7 @@
 
             <?php foreach($dataFoot as $eventFoot): ?>
 
-                <a class="events-images-links" href="./pages/oneEvent.php?<?=$eventFoot["id"]?>"><img src="<?=$eventFoot["picture"]?>" alt="<?=$eventFoot["name"]?>" class="events-image"></a>
+                <a class="events-images-links" href="./pages/oneEvent.php?id=<?=$eventFoot["id"]?>"><img src="<?=$eventFoot["picture"]?>" alt="<?=$eventFoot["name"]?>" class="events-image"></a>
 
             <?php endforeach; ?>
 
