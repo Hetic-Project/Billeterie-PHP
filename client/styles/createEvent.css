@@ -22,7 +22,9 @@
     margin: 15px 0px 15px 0px;
 }
 
-
+.EventTitle{
+    font-size: var(--fontSize-title-h2);
+}
 
 .margin{
     margin-top: var(--margin);

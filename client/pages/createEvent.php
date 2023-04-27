@@ -2,20 +2,19 @@
 require_once '../TPL/header.php';
 ?>
         <main class="main">
-            <h1>Créer un évènement</h1>
+            <h1 class = "EventTitle">Créer un évènement</h1>
             <form action="" method="POST" class = formcreate>
                 <input name="name" type="nom" class="iPLACEHOLDER" placeholder="Nom de l'évènement">
                 <textarea name="description" type="nom" class="iDESC" placeholder="Descriptif"></textarea>
                 <div class = "inputstyle2">
-                    <input name="date" type="nom" class="iPLACEHOLDER" placeholder="Date">
-                    <input name="hour" type="nom" class="iPLACEHOLDER" placeholder="Heure">
+                    <input name="date" type="date" class="iPLACEHOLDER" placeholder="Date">
+                    <input name="hour" type="time" class="iPLACEHOLDER" placeholder="Heure">
                 </div>
                 <input name="adress" type="nom" class="iPLACEHOLDER" placeholder="Adresse">
                 <div class = "inputstyle2">
                     <input name="city" type="nom" class="iPLACEHOLDER" placeholder="Ville">
                     <input name="codepostal" type="nom" class="iPLACEHOLDER" placeholder="CodePostal">
                 </div>
-                <input name="organizer_id" type="nom" class="iPLACEHOLDER" placeholder="Organisateur">
                 <input name="number_seats" type="nom" class="iPLACEHOLDER" placeholder="Participant max">
                 <div class = "inputstyle2">
                     <select name="sport" id="MenuSport">
