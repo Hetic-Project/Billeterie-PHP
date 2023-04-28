@@ -1,5 +1,17 @@
 <?php
 require_once '../TPL/header.php';
+
+session_start();
+
+// Vérifier si l'utilisateur est connecté
+if (isset($_SESSION['username'])) {
+    // L'utilisateur est connecté
+    echo "L'utilisateur est connecté.";
+} else {
+    // L'utilisateur n'est pas connecté
+    echo $_SESSION['username'];
+
+}
 ?>
         <main class="main">
             <h1 class="profileTitle">Mon Profil</h1>
@@ -7,17 +19,17 @@ require_once '../TPL/header.php';
             <div class="bgColor">
                 <div id="conteneur1">
                     <p id="description">
-                        Nom : YALMAN
+                        Nom : <?= $_SESSION['username'] ?>
                     </p>
                     <p id="description">
-                        Prénom : Lucas
+                        mail : <?= $_SESSION['mail'] ?>
                     </p>
                     <p id="description">
-                        Âge : 18 ans
+                        Rôle : <?= $_SESSION['role'] ?>
                     </p>
                 </div>
                 <p id="description">
-                    Localisation : Los Angeles
+                    id : <?= $_SESSION['id'] ?>
                 </p>
             </div>
             <div>
