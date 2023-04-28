@@ -72,6 +72,7 @@
     padding: 5px 10px 5px 10px;
 }
 
+
 .containerReasuranceEvent {
     margin: var(--margin);
     display: flex;
@@ -96,16 +97,16 @@
 }
 
 .containerButtonOrga {
-    display: none;
-    margin-top: 30px;
     display: flex;
-    flex-direction: column;
+    margin-top: 30px;
 }
 
 .buttonOrga {
     margin: var(--margin);
     background-color: #ffffff;
     border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 10px;
     color: black;
     display: block;
 }

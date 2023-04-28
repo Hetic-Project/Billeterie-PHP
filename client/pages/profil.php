@@ -41,19 +41,24 @@ if (isset($_SESSION['id'])) {
                     id : <?= $_SESSION['id'] ?>
                 </p>
             </div>
-            <div>
-                <h1 class="profileTitle">Mes billets</h1>
-                <p class="billet">Billet No.1</p>
-                <div class="bgColor1">
-                 <p class="eventName">
-                    Nom de l'évènement :
-                 </p>
-                 <p class="eventDate">
-                    Date :
-                 </p>
-                </div>
-                <input type="button" class="button" value="Voir mon billet">
+        <div>
+        <h1 class="profileTitle">Mes billets</h1>
+        <p class="billet">Billet No.1</p>
+        <div class="bgColor1">
+            <p class="eventName">
+                Nom de l'évènement :
+            </p>
+            <p class="eventDate">
+                Date :
+            </p>
+        </div>
+        <input type="button" class="button" value="Voir mon billet">
 
+        <form method="post">
+            <input type="submit" class="button" name="logout" value="Me déconnecter">
+        </form>
+    </div>
+</main>
 <script src="../JS/index.js"></script>
 </body>
 </html>
