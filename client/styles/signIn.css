@@ -21,9 +21,7 @@
 .inputText {
     display: flex;
     justify-content: center;
-    width: 70%;
-    padding: var(--padding);
-    margin-left: 10%;
+    width: 95%;
     margin-top: 3%;
     padding: 2%;
     border: 2px solid black;

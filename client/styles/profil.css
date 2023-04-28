@@ -37,6 +37,10 @@
     margin: var(--margin); 
 }
 
+.formLogin {
+    width: 100%;
+}
+
 .bgColor1 {
     display: flex;
     width: 100%;

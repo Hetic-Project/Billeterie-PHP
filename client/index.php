@@ -15,11 +15,21 @@
 
             <div class="all-events">
 
-            <?php foreach($dataRugby as $eventRugby): ?>
+            <?php 
+                $counter = 0;
+                foreach($dataRugby as $eventRugby): 
+                    if ($counter >= 3) {
+                        // Sortir de la boucle foreach lorsque le compteur atteint trois
+                        break;
+                    }
+                    ?>
 
-                <a class="events-images-links" href="./pages/oneEvent.php?id=<?=$eventRugby["id"]?>"><img src="<?=$eventRugby["picture"]?>" alt="<?=$eventRugby["name"]?>" class="events-image"></a>
+                    <a class="events-images-links" href="./pages/oneEvent.php?id=<?=$eventRugby["id"]?>"><img src="<?=$eventRugby["picture"]?>" alt="<?=$eventRugby["name"]?>" class="events-image"></a>
 
-            <?php endforeach; ?>
+                    <?php 
+                    $counter++;
+                endforeach; 
+            ?>
 
             </div>
 
@@ -27,12 +37,21 @@
 
             <div class="all-events">
 
-            <?php foreach($dataFoot as $eventFoot): ?>
+            <?php 
+                $counter = 0;
+                foreach($dataFoot as $eventFoot): 
+                    if ($counter >= 3) {
+                        // Sortir de la boucle foreach lorsque le compteur atteint trois
+                        break;
+                    }
+                    ?>
 
-                <a class="events-images-links" href="./pages/oneEvent.php?id=<?=$eventFoot["id"]?>"><img src="<?=$eventFoot["picture"]?>" alt="<?=$eventFoot["name"]?>" class="events-image"></a>
+                    <a class="events-images-links" href="./pages/oneEvent.php?id=<?=$eventFoot["id"]?>"><img src="<?=$eventFoot["picture"]?>" alt="<?=$eventFoot["name"]?>" class="events-image"></a>
 
-            <?php endforeach; ?>
-
+                    <?php 
+                    $counter++;
+                endforeach; 
+            ?>
             </div>
 
             
