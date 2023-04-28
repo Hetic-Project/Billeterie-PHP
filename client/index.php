@@ -1,5 +1,5 @@
 <?php
-    require_once './TPL/header_index.php';
+    require_once './TPL/header.php';
     $urlCategoryRugby = "http://localhost:4000/events/Rugby";
     $urlCategoryFootball = "http://localhost:4000/events/Football";
 

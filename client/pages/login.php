@@ -6,7 +6,7 @@ require_once '../TPL/header.php';
             <h1 class="loginTitle">
                 DÉJA CLIENT? IDENTIFIEZ-VOUS
             </h1>
-            <form action="http://localhost:3000/pages/login" class="formLogin" method="POST">
+            <form action="http://localhost:3030/login" class="formLogin" method="POST">
                 <input name="username" class="inputText" placeholder="Nom d'utilisateur">
                 <input name="password" class="inputText" placeholder="Mot de passe">
                 <a href="#" class="mdpO">Mot de passe oublié?</a>
