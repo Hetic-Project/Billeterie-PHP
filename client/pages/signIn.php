@@ -1,11 +1,5 @@
 <?php
 require_once '../TPL/header.php';
-
-// Vérifie si l'utilisateur est connecté
-if(isset($_SESSION['username'])) {
-    header('Location: http://localhost:3000/index.php');
-    exit();
-}
 ?>
         <main class="main">
             <h1 class="signInTitle">CRÉEZ VOTRE COMPTE</h1>

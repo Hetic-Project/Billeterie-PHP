@@ -1,10 +1,5 @@
 <?php
 require_once '../TPL/header.php';
-session_start();
-if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true) {
-  header('Location: http://localhost:3000/index.php');
-  exit();
-}
 ?>
 
         <main class="main">
