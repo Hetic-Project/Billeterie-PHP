@@ -11,15 +11,13 @@ if (isset($_SESSION['username'])) {
         // Détruire la session
         session_destroy();
         // Rediriger l'utilisateur vers la page de connexion
-        header('Location: http://localhost:3000/login.php');
+        header('Location: http://localhost:3000/pages/login.php');
         exit;
     }
-?>
 
-<?php
 } else {
     // Si l'utilisateur n'est pas connecté, il est redirigé vers la page de connexion
-    header('Location: http://localhost:3000/login.php');
+    header('Location: http://localhost:3000/pages/login.php');
     exit;
 }
 ?>
