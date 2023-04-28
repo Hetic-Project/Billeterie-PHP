@@ -3,7 +3,7 @@ require_once '../TPL/header.php';
 ?>
         <main class="main">
             <h1 class = "EventTitle">Créer un évènement</h1>
-            <form action="" method="POST" class = formcreate>
+            <form action="http://localhost:4000/events" method="POST" enctype="multipart/form-data" class = formcreate>
                 <input name="name" type="nom" class="iPLACEHOLDER" placeholder="Nom de l'évènement">
                 <textarea name="description" type="nom" class="iDESC" placeholder="Descriptif"></textarea>
                 <div class = "inputstyle2">
@@ -25,7 +25,8 @@ require_once '../TPL/header.php';
                         <option value = "basketball">Basketball</option>
                         <option value = "hokey">Hokey sur glace</option>
                     </select>
-                    <input type="file" name="picture" accept="image/png, image/jpeg">
+                    <input type="file" name="picture" accept="image/png, image/jpeg, image/jpg">
+                    <input type="hidden" name="organizer_id" value="1">
                 </div>
                 <button class = "buttonSubmit margin"> Valider </button>
 
