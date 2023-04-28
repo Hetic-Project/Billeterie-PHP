@@ -86,7 +86,9 @@ class Ticket {
         echo json_encode(array('message' => 'Ticket supprimé avec succès.'));
     }
     
-    function validateTicket($public_code){
+    function validateTicket(){
+
+        $public_code = $_GET['public_code'];
 
         $db = new Database();
         $connection = $db->getConnection();

@@ -64,12 +64,12 @@ switch($url){
         };
         break;
     
-    case preg_match('@^/tickets/([a-zA-Z0-9]{10})/validate$@', $url, $matches) ? $url : '':
+    case '/validateTicket':
 
         $controller = new Ticket();
         if($method == 'GET'){
     
-            $controller->validateTicket($matches[1]);
+            $controller->validateTicket();
             $matched = true;
     
         }else{
