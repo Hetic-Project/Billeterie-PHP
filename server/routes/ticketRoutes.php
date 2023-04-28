@@ -14,7 +14,7 @@ switch($url){
         
         $controller = new Ticket();
         
-        if($method == 'GET'){
+        if($method == 'POST'){
             
             $controller->generateTicket($matches[1], $matches[2]);
             $matched = true;
@@ -22,7 +22,7 @@ switch($url){
         } else {
           
             header('HTTP/1.1 405 Method Not Allowed');
-            header('Allow: GET');
+            header('Allow: POST');
         };
 
         break;

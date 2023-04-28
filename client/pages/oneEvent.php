@@ -8,7 +8,7 @@ if (isset($_GET['id'])) {
     // Effectuer la requête GET
     $jsonOneEvent = file_get_contents($onePageEventUrl);
     $dataOneEvent = json_decode($jsonOneEvent, true);
-
+    $user_id = 1;
 }
 ?>
         <main class="main">
@@ -42,8 +42,10 @@ if (isset($_GET['id'])) {
             <div class="containerReasuranceEvent">
                 <p class="reasuranceEvent">eTicket</p>
                 <p class="reasuranceEvent">Revente</p>
-                <button class="buttonSubmit">Acheter</button>  
             </div>
+            <form method="POST" action="http://localhost:4000/generateTicket/<?=$dataOneEvent["id"]?>/<?=$user_id?>">
+                <button class="buttonSubmit">Acheter</button>  
+            </form>
 
             
 
