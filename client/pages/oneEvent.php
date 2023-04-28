@@ -33,6 +33,17 @@ if (isset($_GET['id'])) {
                         <p>A partir du <?=$dataOneEvent["date"]?></p>
                         <h2><?=$dataOneEvent["city"] . " " . $dataOneEvent["zip_code"]?></h2>
                         <p><?=$dataOneEvent["adress"]?></p>
+
+                        <button class="descriptionEvent">Information</button>
+
+                        <nav class="descriptionSlide">
+                            <div class="informationEvent">
+                                <h2 class="title">Information sur l'evenement</h2>
+                                <button class="buttonCloseDescrip descriptionEvent">X</button>
+                            </div>
+
+                            <p class="descriptionP"><?=$dataOneEvent["description"]?></p>
+                        </nav>
                     </div>  
                 </div>
                 <p class="border">Sport - <?=$dataOneEvent["sport"]?></p>
@@ -45,14 +56,15 @@ if (isset($_GET['id'])) {
                 <button class="buttonSubmit">Acheter</button>  
             </div>
 
-            
-
             <div class="containerButtonOrga">
                 <button class="buttonOrga">Modifier l'evenement</button>
                 <button class="buttonOrga">Supprimer l'evenement</button>
             </div>
 
         </main>
+
         <script src="../JS/index.js"></script>
+        <script src="../JS/oneEvent.js""></script>
+        
     </body>
 </html>
