@@ -1,5 +1,15 @@
 <?php
 require_once '../TPL/header.php';
+
+if (!isset($_SESSION['id'])) {
+    header('Location: http://localhost:3000/pages/login.php');
+    exit();
+}
+
+if ($_SESSION['role'] !== 'organisateur') {
+    header('Location: http://localhost:3000/pages/events.php');
+    exit();
+}
 ?>
         <main class="main">
             <h1 class = "EventTitle">Créer un évènement</h1>
