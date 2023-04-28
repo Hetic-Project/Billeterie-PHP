@@ -32,6 +32,12 @@
             <input class="search-input" type="text" placeholder="Evènement, organisateur, lieu">
         </form>
         
+<?php
+if(isset($_SESSION['id'])) {
+    echo "<style>.nav-li:nth-child(3), .nav-li:nth-child(4) { display: none; }</style>";
+}
+?>
+
         <nav class="nav">
             <ul class="nav-ul">
                 <li class="nav-li"><a href="../index.php" class="nav-a">Accueil</a></li>
