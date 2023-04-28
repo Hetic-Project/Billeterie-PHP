@@ -71,13 +71,11 @@
     flex-wrap: wrap;
     row-gap: 15px;
     justify-content: space-between;
-    border: 1px solid black;
 }
 .reasuranceEvent {
     background-color: #D5D5D5;
     padding: 10px 16% 10px 16%;
     border-radius: 5px;
-    border: 1px solid red;
 }
 
 .buttonSubmit {

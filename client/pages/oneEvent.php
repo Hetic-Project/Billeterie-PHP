@@ -8,6 +8,7 @@ if (isset($_GET['id'])) {
     // Effectuer la requête GET
     $jsonOneEvent = file_get_contents($onePageEventUrl);
     $dataOneEvent = json_decode($jsonOneEvent, true);
+
 }
 ?>
         <main class="main">
@@ -21,23 +22,21 @@ if (isset($_GET['id'])) {
                     <li><span aria-current="page"><?php $nameEvent ?></span></li>
                 </ul>
             </nav>
-
-            <h1><?= $dataOneEvent["name"] ?></h1>
             
             <div class="containerEvent">
-                <h2 class="border"><?php $titleEvent ?></h2>
+                <h2 class="border"><?=$dataOneEvent["name"]?>   </h2>
 
                 <div class="informationEvent">
-                    <img class="imgEvent" alt="image de l'event" href="<?php $imgEvent ?>">
+                    <img class="imgEvent" alt="image de l'event" src="<?=$dataOneEvent["picture"]?>">
 
                     <div class="informationText">
-                        <p>A partir du <?php $dateEvent ?></p>
-                        <h2><?php $placeEvent ?></h2>
-                        <p><?php $adressEvent ?></p>
+                        <p>A partir du <?=$dataOneEvent["date"]?></p>
+                        <h2><?=$dataOneEvent["city"] . " " . $dataOneEvent["zip_code"]?></h2>
+                        <p><?=$dataOneEvent["adress"]?></p>
                     </div>  
                 </div>
-                <p class="border">Sport - <?php $sportEvent ?></p>
-                <p class="border">Organisateur : <?php $organizerEvent ?></p>
+                <p class="border">Sport - <?=$dataOneEvent["sport"]?></p>
+                <!-- <p class="border">Organisateur : <?=$dataOneEvent["name"]?></p> -->
             </div> 
 
             <div class="containerReasuranceEvent">
