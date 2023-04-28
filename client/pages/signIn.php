@@ -1,7 +1,5 @@
 <?php
 require_once '../TPL/header.php';
-header('Location: http://localhost:3030/index.php');
-exit();
 ?>
         <main class="main">
             <h1 class="signInTitle">CRÉEZ VOTRE COMPTE</h1>

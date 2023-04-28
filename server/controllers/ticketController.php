@@ -15,13 +15,12 @@ class Ticket {
         $connection = $db->getConnection();
         
         // Génère une chaîne hexadécimale de 16 caractères
-        $private_code = bin2hex(random_bytes(8)); 
+        $private_code = bin2hex(random_bytes(5)); 
         // Génère une chaîne alphanumérique de 10 caractères
         $public_code = bin2hex(random_bytes(5)); 
         
         // Insérer les données dans la table ticket
         $stmt = $connection->prepare("INSERT INTO ticket (public_code, private_code, id_event, id_user) VALUES (:public_code, :private_code, :id_event, :id_user)");
-        $stmt->bind_param("ssii", $public_code, $private_code, $id_event, $id_user);
         $stmt->execute([
             ":public_code" => $public_code, 
             ":private_code" => $private_code, 
@@ -29,8 +28,9 @@ class Ticket {
             ":id_user" => $id_user
         ]);
         
-        header('Content-Type: application/json');
-        echo json_encode(array('message' => 'Ticket généré avec succès'));
+        // header('Content-Type: application/json');
+        // echo json_encode(array('message' => 'Ticket généré avec succès'));
+        header('Location: http://localhost:3000/pages/profil.php');
     }
 
     function getAllTickets($id_user){
