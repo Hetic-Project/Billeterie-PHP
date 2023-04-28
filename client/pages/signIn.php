@@ -1,6 +1,6 @@
 <?php
 require_once '../TPL/header.php';
-header('Location: http://localhost:3030/index.php');
+header('Location: http://localhost:3000/index.php');
 exit();
 ?>
         <main class="main">
