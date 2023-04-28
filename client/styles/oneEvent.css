@@ -65,6 +65,13 @@
     font-size: var(--fontSize-texte);
 }
 
+.descriptionEvent {
+    background-color: #D5D5D5;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+}
+
 .containerReasuranceEvent {
     margin: var(--margin);
     display: flex;
@@ -86,19 +93,42 @@
     border-radius: 5px;
     background-color: var(--primary-color);
     color: #ffffff;
-
 }
 
 .containerButtonOrga {
-    display: none;
+    display: flex;
     margin-top: 30px;
 }
 
 .buttonOrga {
-    width: 91%;
     margin: var(--margin);
     background-color: #ffffff;
     border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 10px;
     color: black;
     display: block;
+}
+
+.descriptionSlide {
+    display: none;
+}
+
+.appearSlide {
+    display: block;
+    width: 80%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right:0;
+    background-color: #fff;
+}
+
+.descriptionP {
+    margin: 50px 0px 15px 30px;
+}
+
+.title {
+    margin: var(--margin);
+    font-size: var(--fontSize-title-h2);
 }
