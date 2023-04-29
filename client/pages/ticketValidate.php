@@ -15,10 +15,9 @@ require_once '../TPL/header.php';
                     <video class="video" id="webcam" autoplay playsinlne></video>
                 
 
-                    <form action="" method="get" class="form">
+                    <form action="http://localhost:4000/validateTicket" method="GET" class="form">
                         
-                        <input class="input" type="text" name="spectatorName" id="spectatorName" placeholder="Nom de visiteur" required>
-                        <input class="input" type="number" name="publicCode" id="publicCode" placeholder="Code public du billet" required>
+                        <input class="input" type="text" name="public_code" id="publicCode" placeholder="Code public du billet" required>
                         
                         <input class="submit" type="submit" value="Submit" >
                     </form>
