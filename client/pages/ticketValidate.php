@@ -40,9 +40,13 @@ if (isset($_GET['erreur'])) {
         </div>
         <script src="../JS/index.js"></script>
         <script type="text/javascript" src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js"></script>
-        <script>
-            const webCamElement = document.getElementById("webcam");
+        <script type="text/javascript">
+            
+            // Il n y a pas de scanner de qrcode
+            const webCamElement = document.getElementById('webcam');
             const webcam = new Webcam(webCamElement, "user");
+            const changeColor = document.getElementById("color");
+
             webcam.start();
         </script>
     </body>
