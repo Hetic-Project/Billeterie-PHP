@@ -1,11 +1,15 @@
 <?php
 require_once '../TPL/header.php';
-if ($_SESSION['role'] == 'organisateur') {
-    header('Location: http://localhost:3000/pages/createEvent.php');
-    } else {
-        header('Location: http://localhost:3000/index.php');
-    exit();
-}
+session_start();
+
+if (!isset($_SESSION['token'])) {
+    header('Location: http://localhost:3000/pages/login.php');
+    } else if ($_SESSION['role'] != "organisateur"){
+        $message = "il faut etre organisateur pour créer un évènement";
+        header('Location: http://localhost:3000?erreur=' . urlencode($message));
+        exit;
+    }
+
 ?>
 
         <main class="main">
@@ -33,7 +37,7 @@ if ($_SESSION['role'] == 'organisateur') {
                         <option value = "hokey">Hokey sur glace</option>
                     </select>
                     <input type="file" name="picture" accept="image/png, image/jpeg, image/jpg">
-                    <input type="hidden" name="organizer_id" value="1">
+                    <input type="hidden" name="organizer_id" value="<?=$_SESSION['id'] ?>">
                 </div>
                 <button class = "buttonSubmit margin"> Valider </button>
 

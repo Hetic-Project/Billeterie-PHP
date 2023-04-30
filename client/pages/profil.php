@@ -4,7 +4,7 @@ require_once '../TPL/header.php';
 // Démarrer la session
 session_start();
 
-if (isset($_SESSION['id'])) {
+if (isset($_SESSION['token'])) {
     // Si l'utilisateur est connecté
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['logout'])) {
         // Si le formulaire de déconnexion a été soumis
@@ -20,6 +20,12 @@ if (isset($_SESSION['id'])) {
     header('Location: http://localhost:3000/pages/login.php');
     exit;
 }
+
+    $getAllTickets = "http://localhost:4000/tickets/" .$_SESSION["id"];
+
+    // Effectuer la requête GET
+    $jsonTickets = file_get_contents($getAllTickets);
+    $tickets = json_decode($jsonTickets, true);
 
 ?>
         <main class="main">
@@ -42,17 +48,24 @@ if (isset($_SESSION['id'])) {
                 </p>
             </div>
         <div>
-        <h1 class="profileTitle">Mes billets</h1>
-        <p class="billet">Billet No.1</p>
-        <div class="bgColor1">
-            <p class="eventName">
-                Nom de l'évènement :
-            </p>
-            <p class="eventDate">
-                Date :
-            </p>
-        </div>
-        <input type="button" class="button" value="Voir mon billet">
+        <?php if($_SESSION["role"] == "participant"): ?>
+
+            <h1 class="profileTitle">Mes billets</h1>
+            <?php foreach($tickets as $ticket): ?>
+
+                <a href="./oneTicket.php?id=<?=$ticket["id"]?>"><p class="billet">Numéro : <?= $ticket["public_code"] ?></p></a> 
+                <div class="bgColor1">
+                    <p class="eventName">
+                        Nom de l'évènement : <?= $ticket["name"] ?>
+                    </p>
+                    <p class="eventDate">
+                        Date : <?= $ticket["date"] ?>
+                    </p>
+                </div>
+
+            <?php endforeach; ?>
+          <?php endif; ?>
+        
 
         <form method="post">
             <input type="submit" class="button" name="logout" value="Me déconnecter">

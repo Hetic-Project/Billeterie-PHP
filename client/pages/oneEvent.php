@@ -1,5 +1,6 @@
 <?php
 require_once '../TPL/header.php';
+session_start();
 // Utilisation de la superglobale $_GET
 if (isset($_GET['id'])) {
     $valeur = $_GET['id'];
@@ -8,11 +9,10 @@ if (isset($_GET['id'])) {
     // Effectuer la requête GET
     $jsonOneEvent = file_get_contents($onePageEventUrl);
     $dataOneEvent = json_decode($jsonOneEvent, true);
-    $user_id = 1;
 }
 ?>
         <main class="main">
-
+            
             
             <nav aria-label="Breadcrumb" class="breadcrumb">
                 <ul>
@@ -54,8 +54,14 @@ if (isset($_GET['id'])) {
                 <p class="reasuranceEvent">eTicket</p>
                 <p class="reasuranceEvent">Revente</p>
             </div>
-            <form method="POST" action="http://localhost:4000/generateTicket/<?=$dataOneEvent["id"]?>/<?=$user_id?>">
-                <button class="buttonSubmit">Acheter</button>  
+            <form method="POST" action="http://localhost:4000/generateTicket/<?=$dataOneEvent["id"]?>/<?=$_SESSION["id"]?>">
+                <?php if($_SESSION["token"]) : ?>
+                <button class="buttonSubmit">Acheter</button>
+                <?php endif; ?>
+                <?php if(!$_SESSION["token"]) : ?>
+                <p class="pSubmit">Vous devez etre connecter pour acheter un billet</p>
+                <?php endif; ?>
+
             </form>
 
             <div class="containerButtonOrga">

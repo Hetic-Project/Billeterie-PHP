@@ -2,14 +2,6 @@
     width: 100%;
     height: calc(100vh - 120px);
     padding-top: 15px;
-    background-color: red;
-}
-
-.green {
-    width: 100%;
-    height: 100vh;
-    padding-top: 15px;
-    background-color: greenyellow;
 }
 
 .code_error, .error {

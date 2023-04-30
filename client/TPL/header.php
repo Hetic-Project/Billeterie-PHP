@@ -31,13 +31,15 @@
         <form action="" method="GET" class="search">
             <input class="search-input" type="text" placeholder="Evènement, organisateur, lieu">
         </form>
-
+        <?php session_start() ?>
         <nav class="nav">
             <ul class="nav-ul">
                 <li class="nav-li"><a href="../index.php" class="nav-a">Accueil</a></li>
                 <li class="nav-li"><a href="../pages/events.php" class="nav-a">Évènements</a></li>
+                <?php if(!isset($_SESSION["token"])) : ?>
                 <li class="nav-li"><a href="../pages/signIn.php" class="nav-a">Inscription</a></li>
                 <li class="nav-li"><a href="../pages/login.php" class="nav-a">Connexion</a></li>
+                <?php endif ?>
                 <li class="nav-li"><a href="../pages/createEvent.php" class="nav-a">Créer un évènement</a></li>
                 <li class="nav-li"><a href="../pages/ticketValidate.php" class="nav-a">Validations Billets</a></li>
             </ul>

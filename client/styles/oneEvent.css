@@ -133,3 +133,8 @@
     margin: var(--margin);
     font-size: var(--fontSize-title-h2);
 }
+
+.pSubmit{
+    text-align: center;
+    margin: 5px 0px 5px 0px;
+}

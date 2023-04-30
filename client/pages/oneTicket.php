@@ -1,17 +1,27 @@
 <?php
-require_once '../TPL/header.php';
+    require_once '../TPL/header.php';
+    session_start();
+    if (isset($_GET['id'])) {
+        $valeur = $_GET['id'];
+        $oneTicketUrl = "http://localhost:4000/oneTicket/" .$valeur;
+    
+        // Effectuer la requête GET
+        $jsonOneTicket = file_get_contents($oneTicketUrl);
+        $OneTicket = json_decode($jsonOneTicket, true);
+        $QRCODE = $OneTicket["public_code"];
+    }
 ?>
         <main class="main">
             <h2 class="facture">Votre facture</h2>
-            <p class="pTicket">Numéro de commande : <span class="numCommande">0123456789</span></p>
-            <p class="pTicket">Date : <span class="dateTicket">01/02/2023</span></p>
-            <p class="pTicket">Evènement : <span class="eventTicket">Coupe de france PSG / OM</span></p>
+            <p class="pTicket">Numéro de commande : <span class="numCommande"><?= $OneTicket["public_code"]?></span></p>
+            <p class="pTicket">Date : <span class="dateTicket"><?= $OneTicket["date"]?></span></p>
+            <p class="pTicket">Evènement : <span class="eventTicket"><?= $OneTicket["name"]?></span></p>
             <p class="pTicket">Prix : <span class="prixTicket">20.00€</span></p>
             <input class="impression" id="impression" name="impression" type="button" onclick="imprimer_ticket()" value="Imprimer le ticket" />
 
             <div id="ticket" class="containerTicket">
-                <p class="pTicket">Numéro du billet : <span class="numTicket">12345</span></p>
-                <p class="pTicket">visiteur : <span class="spectatorName">William Vandal</span></p>
+                <p class="pTicket">Numéro du billet : <span class="numTicket"><?= $OneTicket["public_code"]?></span></p>
+                <p class="pTicket">visiteur : <span class="spectatorName"><?= $_SESSION["username"]?></span></p>
                 <div class="ticketPlace">
                     <p class="pTicket">Porte : <span class="Porte" id="spanTicket">A</span>Ligne : <span class="numLigne" id="spanTicket">3</span> Siège : <span class="numSiege" id="spanTicket">15</span></p>
 
@@ -37,7 +47,7 @@ require_once '../TPL/header.php';
 
             var qrCode = document.getElementById("qrCode");
             qrCode.style.display = "flex";
-            new QRCode(qrCode, <?php $qrCodeTicket ?>)
+            new QRCode(qrCode, "<?= $QRCODE ?>")
         </script>
     </body>
 </html>

@@ -8,9 +8,15 @@
 
     $dataRugby = json_decode($rugbyJson, true);
     $dataFoot = json_decode($footJson, true);
+
+    if (isset($_GET['erreur'])) {
+        $message = $_GET['erreur'];
+        echo "Erreur : " . $message;
+    }
+    
 ?>
         <main class="main">
-
+            <h1><?=$_SESSION["username"]?></h1>
             <h1 class="sport-title">Rugby</h1>
 
             <div class="all-events">
