@@ -18,6 +18,9 @@
             <p class="pTicket">Evènement : <span class="eventTicket"><?= $OneTicket["name"]?></span></p>
             <p class="pTicket">Prix : <span class="prixTicket">20.00€</span></p>
             <input class="impression" id="impression" name="impression" type="button" onclick="imprimer_ticket()" value="Imprimer le ticket" />
+            <form action="http://localhost:4000/oneTicket/<?=$valeur ?>" method="POST">
+                <button class="impression">Annuler ma participation</button>
+            </form>
 
             <div id="ticket" class="containerTicket">
                 <p class="pTicket">Numéro du billet : <span class="numTicket"><?= $OneTicket["public_code"]?></span></p>

@@ -1,66 +1,48 @@
-# ORGANISATION FRONT
+# BILLETERIE PHP
 
 ## TEAMS
 
 - Lucas YALMAN
 - Tom CARDONNEL
-- Mohamed YAICH
 - William VANDAL
 
-## TACHES
+## Use case
 
-1. Maquettage du site
+Les organisateurs peuvent :
+- se connecter, se déconnecter
+- Créer, modifier, supprimer un évènement
+- Valider un billet
 
-- Faire une liste des pages du site
-- Faire le chemin utilisateur
-- Maquette figma : a partir de site cocurrent 
+Les participants peuvent :
+- se connecter, se déconnecter
+- participer a un évènement / acheter un billet
+- annuler leurs participation a un évènement
 
-2. Conseption du site & architecture
+## MCD
 
-- un dossier : CSS, JS, Pages, TPL
-- un fichier : index.php
+<img src="./images/Mcd-Billet.png" alt="Photo du Mcd">
 
-## DEADLINE
+## Routing de l'API
 
-- Rendus le 30 avril 23h59
+Base URL du client : http://localhost:3000
+Base URL de l'API : http://localhost:4000
 
-- Jeudi 20 avril 15h : présenter la maquette
-- Mardi 25 avril : présenter le site
-- Jeudi 27 avril : Communication front / back
+## Routing évènements
 
+|  METHODE  |  PATH  |  DESCRIPTION  |
+|  -------  |  ----  |  -----------  |
+|GET| /events |liste de tous les évènements|
+|GET|/events/:id|afficher un évènement|
+|DELETE|/events/:id|Supprimer un évènement|
+|GET|/events/:category|Liste de tous les évènements d'un sport|
+|POST|/events/update/:id|Mettre a jour un évènement|
 
-# ORGANISATION BACK
+## Routing Billets
 
-## TEAMS
-
-- Atigou BAH
-- Massinissa BELHARET
-- Support Back : Mohamed YAICH
-
-## TACHES
-
-1. Conception de la BDD
-
-- Faire un use case
--> liste de besoin utilisateur 
-- Créer un MCD 
--> Schéma des tables et de leurs relations
-
-2. Concevoire L'API
-
-- Un fichier index.php : le point d'entrer de l' API
-- Un dossier Controllers : contient toute les requêttes a la BDD et renvoie des résultats.
-- Un dossier Database : -> contient un fichier : client.php : contient la connexion a la BDD
-- Un dossier Router : contient toutes les routes de l'API.
-
-3. Documenter l'API
-
-- Utiliser Swagger-php
-
-## DEADLINE
-
-- Rendus le 30 avril 23h59
-
-- Jeudi 20 avril 15h : présenter le use case et le MCD
-- Mardi 25 avril : présenter l'API
-- Jeudi 27 avril : Communication front / back
+|  METHODE  |  PATH  |  DESCRIPTION  |
+|  -------  |  ----  |  -----------  |
+|POST| /generateTicket/:id_event/:id_user |créer un billet|
+|GET|/tickets/:id_user|afficher tous les billets d'un participant|
+|GET|/oneTicket/:id|afficher le détail d'un billet|
+|DELETE|/oneTicket/:id|Supprimer un billet|
+|POST|/validateTicket|Valider un billet|

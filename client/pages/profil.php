@@ -1,6 +1,10 @@
 <?php
 require_once '../TPL/header.php';
 
+if (isset($_GET['message'])) {
+    $message = $_GET['message'];
+}
+
 // Démarrer la session
 session_start();
 
@@ -29,6 +33,7 @@ if (isset($_SESSION['token'])) {
 
 ?>
         <main class="main">
+            <h4><?= $message ?></h4>
             <h1 class="profileTitle">Mon Profil</h1>
             <p class="subTitleProfile">Informations personnelles</p>
             <div class="bgColor">

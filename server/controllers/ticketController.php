@@ -82,8 +82,9 @@ class Ticket {
     
         $connection = null;
     
-        header('Content-Type: application/json');
-        echo json_encode(array('message' => 'Ticket supprimé avec succès.'));
+        $message = "Votre billet a bien été supprimé";
+        header('Location: http://localhost:3000/pages/profil.php?message=' . urlencode($message));
+        exit;
     }
     
     function validateTicket(){

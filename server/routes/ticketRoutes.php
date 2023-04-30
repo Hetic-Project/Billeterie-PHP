@@ -51,14 +51,14 @@ switch($url){
             
             $controller->getOneTicket($matches[1]);
 
-        } elseif($method == 'DELETE') {
+        } elseif($method == 'POST') {
             
             $controller->deleteTicket($matches[1]);
 
         } else {
           
             header('HTTP/1.1 405 Method Not Allowed');
-            header('Allow: GET, DELETE');
+            header('Allow: GET, POST');
         };
         break;
     

@@ -40,8 +40,10 @@
                 <li class="nav-li"><a href="../pages/signIn.php" class="nav-a">Inscription</a></li>
                 <li class="nav-li"><a href="../pages/login.php" class="nav-a">Connexion</a></li>
                 <?php endif ?>
-                <li class="nav-li"><a href="../pages/createEvent.php" class="nav-a">Créer un évènement</a></li>
-                <li class="nav-li"><a href="../pages/ticketValidate.php" class="nav-a">Validations Billets</a></li>
+                <?php if($_SESSION["role"] == "organisateur") : ?>
+                    <li class="nav-li"><a href="../pages/createEvent.php" class="nav-a">Créer un évènement</a></li>
+                    <li class="nav-li"><a href="../pages/ticketValidate.php" class="nav-a">Validations Billets</a></li>
+                <?php endif ?>
             </ul>
         </nav>
     </header>
