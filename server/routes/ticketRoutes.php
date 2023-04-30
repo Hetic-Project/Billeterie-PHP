@@ -34,7 +34,6 @@ switch($url){
         if($method == 'GET'){
             
             $controller->getAllTickets($matches[1]);
-            $matched = true;
 
         } else {
             
@@ -51,7 +50,6 @@ switch($url){
         if($method == 'GET'){
             
             $controller->getOneTicket($matches[1]);
-            $matched = true;
 
         } elseif($method == 'DELETE') {
             
@@ -64,20 +62,16 @@ switch($url){
         };
         break;
     
-    case '/validateTicket':
-
-        $controller = new Ticket();
-        if($method == 'GET'){
-    
-            $controller->validateTicket();
-            $matched = true;
-    
-        }else{
-    
-            header('HTTP/1.1 405 Method Not Allowed');
-            header('Allow: GET');
-        };
-        break;
+        case "/validateTicket" :
+            $controller = new Ticket();
+            if ($method == 'POST') {            
+                $controller->validateTicket($code);    
+            } else {
+                header('HTTP/1.1 405 Method Not Allowed');
+                header('Allow: POST');
+                exit();
+            }
+            break;              
           
     default:
         // si aucune route ne correspond j'envoi une erreur

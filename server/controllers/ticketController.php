@@ -38,7 +38,7 @@ class Ticket {
         $db = new Database();
         $connection = $db->getConnection();
     
-        $request = $connection->prepare("SELECT * FROM ticket WHERE id_user = :id_user");
+        $request = $connection->prepare("SELECT ticket.id, ticket.public_code, event.name, event.date FROM ticket JOIN event ON ticket.id_event = event.id  WHERE id_user = :id_user");
 
         $request->execute([
             ":id_user" => $id_user
@@ -88,16 +88,16 @@ class Ticket {
     
     function validateTicket(){
 
-        $public_code = $_GET['public_code'];
+        $code = $_POST['code'];
 
         $db = new Database();
         $connection = $db->getConnection();
     
         // Vérifie si le code public existe dans la table ticket
-        $request = $connection->prepare("SELECT * FROM ticket WHERE public_code = :public_code");
+        $request = $connection->prepare("SELECT * FROM ticket WHERE public_code = :code");
         
         $request->execute([
-            ":public_code" => $public_code,
+            ":code" => $code,
         ]);
         $result = $request->fetch(PDO::FETCH_ASSOC);
 
@@ -107,24 +107,24 @@ class Ticket {
             // Vérifier si la valeur du champ scan est égale à 0
             if ($result['scan'] == 0) {
                 // Mettre à jour la valeur du champ scan à 1
-                $updateRequest = $connection->prepare("UPDATE ticket SET scan = 1 WHERE public_code = :public_code");
+                $updateRequest = $connection->prepare("UPDATE ticket SET scan = 1 WHERE public_code = :code");
                 $updateRequest->execute([
-                    ":public_code" => $public_code
+                    ":code" => $code
                 ]);
             }else{
-                header('Content-Type: application/json');
-                http_response_code(400);
-                echo json_encode(array('message' => 'Ticket déja valide'));
-                return;
+                $message = "Ticket déja valider";
+                header('Location: http://localhost:3000/pages/ticketValidate.php?erreur=' . urlencode($message));
+                exit;
             }
 
-            header('Content-Type: application/json');
-            echo json_encode(array('message' => 'Ticket valide'));
+            $message = "Ticket validé";
+            header('Location: http://localhost:3000/pages/ticketValidate.php?erreur=' . urlencode($message));
+            exit;
 
         } else {
-            header('Content-Type: application/json');
-            http_response_code(400);
-            echo json_encode(array('message' => 'Ticket invalide'));
+            $message = "Ticket invalid";
+            header('Location: http://localhost:3000/pages/ticketValidate.php?erreur=' . urlencode($message));
+            exit;
         }
     }
         

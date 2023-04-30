@@ -65,8 +65,4 @@ switch ($url) {
             header('Allow: POST');
         };
         break;
-
-    default:
-        http_response_code(404);
-        break;
 }
