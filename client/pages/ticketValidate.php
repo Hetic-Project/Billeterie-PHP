@@ -1,7 +1,7 @@
 <?php
 require_once '../TPL/header.php';
 ?>
-        <div class="red">
+        <div class="red" id="color">
             <main class="main">
                 <br>
                 <h1 class="code_error">CODE HTTP 401</h1>
@@ -27,9 +27,13 @@ require_once '../TPL/header.php';
         </div>
         <script src="../JS/index.js"></script>
         <script type="text/javascript" src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js"></script>
-        <script>
-            const webCamElement = document.getElementById("webcam");
+        <script type="text/javascript">
+            
+            // Il n y a pas de scanner de qrcode
+            const webCamElement = document.getElementById('webcam');
             const webcam = new Webcam(webCamElement, "user");
+            const changeColor = document.getElementById("color");
+
             webcam.start();
         </script>
     </body>
