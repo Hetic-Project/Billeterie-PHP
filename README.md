@@ -20,7 +20,7 @@ Les participants peuvent :
 
 ## MCD
 
-<img src="./images/Mcd-Billet.png" alt="Photo du Mcd">
+<img src="./server/images/Mcd-Billet.png" alt="Photo du Mcd">
 
 ## Routing de l'API
 
@@ -44,5 +44,5 @@ Base URL de l'API : http://localhost:4000
 |POST| /generateTicket/:id_event/:id_user |créer un billet|
 |GET|/tickets/:id_user|afficher tous les billets d'un participant|
 |GET|/oneTicket/:id|afficher le détail d'un billet|
-|DELETE|/oneTicket/:id|Supprimer un billet|
+|POST|/oneTicket/:id|Supprimer un billet|
 |POST|/validateTicket|Valider un billet|
